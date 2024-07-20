@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Box Shadow lipe</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div id="generate-container">
+        <div id="generate-input">
+            <h2>Configurações da Box Shadow</h2>
+            <div class="form-control">
+                <div class="generate-box-shadow">
+                    <label for="horizontal">Deslocamento horizontal:</label>
+                    <input 
+                        type="range" 
+                        name="horizontal" 
+                        id="horizontal" 
+                        min="-100" 
+                        max="100" 
+                        value="5">
+                </div>
+                <div class="generate-ref">
+                    <input type="text" id="horizontal-ref">
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="generate-box-shadow">
+                    <label for="vertical">Deslocamento vertical:</label>
+                    <input 
+                        type="range" 
+                        name="vertical" 
+                        id="vertical" 
+                        min="-100" 
+                        max="100" 
+                        value="5">
+                </div>
+                <div class="generate-ref">
+                    <input type="text" id="vertical-ref">
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="generate-box-shadow">
+                    <label for="blur">Intensidade do borrão (Blur):</label>
+                    <input 
+                        type="range" 
+                        name="blur" 
+                        id="blur" 
+                        min="0" 
+                        max="100" 
+                        value="10">
+                </div>
+                <div class="generate-ref">
+                    <input type="text" id="blur-ref">
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="generate-box-shadow">
+                    <label for="spread">Intensidade do espalhamento (Spread):</label>
+                    <input 
+                        type="range" 
+                        name="spread" 
+                        id="spread" 
+                        min="-100" 
+                        max="100" 
+                        value="5">
+                </div>
+                <div class="generate-ref">
+                    <input type="text" id="spread-ref">
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="generate-box-shadow">
+                    <label for="color">Cor da sombra:</label>
+                    <input 
+                        type="color" 
+                        name="color" 
+                        id="color"
+                        >
+                </div>
+                <div class="generate-ref">
+                    <input type="text" id="color-ref" value="#000">
+                </div>
+            </div>
+        </div>
+        <div id="preview-container">
+            <h2>Preview do efeito gerado:</h2>
+            <div id="box"></div>
+        </div>
+    </div>
+    <div id="copy-container">
+        <h2>Copie e cole no seu arquivo de CSS:</h2>
+        <div id="copy">
+            <p id="box-shadow">box-shadow: <span></span>;</p>
+            <p id="webkit-box-shadow">-webkit-box-shadow: <span></span>;</p>
+            <p id="moz-box-shadow">-moz-box-shadow: <span></span>;</p>
+        </div>
+        <p id="copy-p">Clique no quadro acima para copiar as regras</p>
+    </div>
+</body>
+</html>
